@@ -1,0 +1,25 @@
+{
+    "Records": [
+        {
+            "cf": {
+                "config": {
+                    "distributionId": "EXAMPLE"
+                },
+                "request": {
+                    "uri": "/api/rich_link",
+                    "method": "GET",
+                    "clientIp": "2001:cdba::3257:9652",
+                    "body": "<meta property=\"og:image\" content=\"https://cambiatus-uploads.s3.amazonaws.com/cambiatus-uploads/b214c106482a46ad89f3272761d3f5b5\">",
+                    "headers": {
+                        "host": [
+                            {
+                                "key": "Host",
+                                "value": "d123.cf.net"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

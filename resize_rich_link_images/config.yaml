@@ -1,0 +1,42 @@
+region: us-east-1
+
+function_name: resize_rich_link_images
+handler: serve_thumb.lambda_handler
+description: Serve thumbnail for rich link. If thumbnail does not exist, create it
+runtime: python3.9
+# role: lambda_basic_execution
+
+# S3 upload requires appropriate role with s3:PutObject permission
+# (ex. basic_s3_upload), a destination bucket, and the key prefix
+# bucket_name: 'example-bucket'
+# s3_key_prefix: 'path/to/file/'
+
+# if access key and secret are left blank, boto will use the credentials
+# defined in the [default] section of ~/.aws/credentials.
+
+# In this project the aws access keys are injected via github actions
+# when deploying the lambda function
+aws_access_key_id: AWS_ACCESS_KEY_ID
+aws_secret_access_key: AWS_SECRET_ACCESS_KEY
+
+# dist_directory: dist
+# timeout: 15
+# memory_size: 512
+# concurrency: 500
+#
+
+# Experimental Environment variables
+# environment_variables:
+#     env_1: foo
+#     env_2: baz
+
+# If `tags` is uncommented then tags will be set at creation or update
+# time.  During an update all other tags will be removed except the tags
+# listed here.
+#tags:
+#    tag_1: foo
+#    tag_2: bar
+
+# Build options
+build:
+  source_directories: lib # a comma delimited list of directories in your project root that contains source to package.
