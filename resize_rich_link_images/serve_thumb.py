@@ -55,9 +55,9 @@ def lambda_handler(event, context):
             create_thumbnail(s3_client, s3_bucket, s3_image_path +
                              image_name, s3_thumb_path+image_name)
 
-        body = request['body'].replace(s3_image_path, s3_thumb_path)
+        request['body'] = request['body'].replace(s3_image_path, s3_thumb_path)
 
     return {
         'statusCode': 200,
-        'body': json.dumps(body)
+        'body': json.dumps(request['body'])
     }
